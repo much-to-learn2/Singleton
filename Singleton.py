@@ -37,7 +37,11 @@ class Singleton(object):
     # No instances of the Singleton class exist yet
     instance = None 
 
-    # define protocol for creation of new class
+    # define protocol for creation of new instace
+    # __new__: creationn of an instance
+    # __init__: initialization of an instance
+    # So, __new__ allocates the memory for the object, and __init handles
+    # the internal variables specific to the object
     def __new__(cls):
         if not cls.instance: 
             # if an instance of Singleton does not yet exist, create it
